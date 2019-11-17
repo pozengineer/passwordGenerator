@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us" class="h-100">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>passwordGenerator</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style01.css">
+        
+    </head>
+
+    <body class="d-flex flex-column h-100">
+        <script type="text/javascript">
+            // const generate = document.getElementById("generate");
+            // const password = document.getElementById("password");
+            
+            function generatePassword() {
+                alert("Welcome to Password Generator");
+
+                // var length = 25;
+                // var charSet03 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+                // var n = charSet03.length;
+                var retVal = "";
+
+                // for (var i = 0; i < length; i++) {
+                //     retVal += charSet03.charAt(Math.floor(Math.random() * n));
+                // }
+                // console.log(retVal);
+                // document.getElementById("password").value = retVal;
+                // return retVal;
+                
+                var userInput = prompt("Please select type of password\n1. Letters\n2. Letters/ Numbers\n3. Letter/ Number/ Special");
+                // var passwordLength = prompt("Please enter length of Password");
+                // var option = parseInt(userInput);
+                // var length = parseInt(passwordLength);
+                
+                while (userInput != null) {
+                    if (userInput == 1) {
+                        var passwordLength = prompt("Please enter length of Password");
+
+                        while (passwordLength < 0 || passwordLength > 128){
+                            alert("Error, Invalid number!");
+                            passwordLength = prompt("Enter positive number");
+                        }
+
+                        var charSet01 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                        var numSet = charSet01.length;
+                        
+                        for (var i = 0; i < passwordLength; i++) {
+                        retVal += charSet01.charAt(Math.floor(Math.random() * numSet));
+                        }
+
+                        console.log(retVal);
+                        document.getElementById("password").value = retVal;
+                        return retVal;
+                    }
+                    else if (userInput == 2) {
+                        passwordLength = prompt("Please enter length of Password");
+
+                        while (passwordLength < 0 || passwordLength > 128){
+                            alert("Error, Invalid number!");
+                            passwordLength = prompt("Enter positive number");
+                        }
+
+                        var charSet02 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                        numSet = charSet02.length;
+
+                        for (var i = 0; i < passwordLength; i++) {
+                        retVal += charSet02.charAt(Math.floor(Math.random() * numSet));
+                        }
+
+                        console.log(retVal);
+                        document.getElementById("password").value = retVal;
+                        return retVal;
+                    }
+                    else if (userInput == 3) {
+                        passwordLength = prompt("Please enter length of Password");
+
+                        while (passwordLength < 0 || passwordLength > 128){
+                            alert("Error, Invalid number!");
+                            passwordLength = prompt("Enter positive number");
+                        }
+
+                        var charSet03 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+                        numSet = charSet03.length;
+                        
+                        for (var i = 0; i < passwordLength; i++) {
+                        retVal += charSet03.charAt(Math.floor(Math.random() * numSet));
+                        }
+
+                        console.log(retVal);
+                        document.getElementById("password").value = retVal;
+                        return retVal;
+                    }
+                    else {
+                        alert("Error! Invalid input! Enter number 1, 2, or 3");
+                    }
+                    userInput = prompt("Please select type of password\n1. Letters\n2. Letters/ Numbers\n3. Letter/ Number/ Special");
+                }
+            }
+
+            function copyPassword () {
+                var password = document.getElementById("password");
+                password.select();
+                document.execCommand("Copy");
+                alert("Copied the text: " + password.value);
+            }
+
+            function resetPassword () {
+                document.getElementById("password").value = "Your Secure Password";
+                alert("Password Reset!");
+            }
+
+        </script>
+
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+
+        <section id="mainContent">
+            <div class="container">
+                <!-- row01 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Generate a Password</h2>
+                        <hr>
+                    </div>
+                </div>
+                <!-- row02 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea
+                        class="textArea"
+                        readonly
+                        id="password"
+                        placeholder="Your Secure Password"
+                        aria-label="Generated Password"
+                        ></textarea>
+                        <hr>
+                    </div>
+                </div>
+                <!-- row02 -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <button id="generate" type="button" class="btn btn-success btn-lg" onclick="generatePassword()">
+                            Generate Password
+                        </button>
+                    </div>
+
+                    <div class="col-md-4">
+                        <button id="reset" type="button" class="btn btn-primary btn-lg" onclick="resetPassword()">
+                            Reset
+                        </button>
+                    </div>
+
+                    <div class="col-md-4">
+                        <button id="copy" type="button" class="btn btn-secondary btn-lg" onclick="copyPassword()">
+                            Copy to Clipboard
+                        </button>
+                    </div>
+                </div>   
+            
+            </div>
+        </section>
+
+        <footer class="footer mt-auto py-3">
+            <span class="text-muted">Copyright &#169 2019</span>
+        </footer>
+
+    </body>
+
+</html>
