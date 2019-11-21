@@ -24,7 +24,14 @@
                         <hr>
                     </div>
                 </div>
-                <!-- row02 -->
+                <!-- row01-->
+                <div>
+                    <div class="col-md-12 pass" id="passLength">
+                        <h3>Length of Password</h3>
+                        <input type="text" id="passwordLength" onfocus="this.placeholder=''" placeholder="Enter number here" onkeypress="return isNumberKey(event)">
+                    </div>
+                </div>
+                <!-- row03 -->
                 <div class="row">
                     <div class="col-md-12">
                         <textarea
@@ -37,7 +44,7 @@
                         <hr>
                     </div>
                 </div>
-                <!-- row02 -->
+                <!-- row04 -->
                 <div class="row">
                     <div class="col-md-4">
                         <button id="generate" type="button" class="btn btn-success btn-lg" onclick="generatePassword()">

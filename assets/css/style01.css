@@ -133,7 +133,9 @@ hr {
     width: 200px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .img-fluid {
@@ -164,6 +166,20 @@ hr {
     color: #666666 !important;
     text-decoration: none;
   }
+
+#passLength {
+    padding-top: 15px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* #passwordLength {
+    margin: auto;
+    display: block;
+} */
 
 /* These rules take effect when the browser's width */
 /* is either 225px or more. */
