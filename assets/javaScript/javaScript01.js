@@ -9,7 +9,7 @@ function generatePassword() {
     // var length = 25;
     // var charSet03 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
     // var n = charSet03.length;
-    // var retVal = "";
+    var retVal = "";
 
     // for (var i = 0; i < length; i++) {
     //     retVal += charSet03.charAt(Math.floor(Math.random() * n));
@@ -36,95 +36,24 @@ function generatePassword() {
     
     while (userInput != null) {
         if (inputNum === 1) {
-            characterSelect(0);    
+            var passwordGen = characterSelect(0);
+            return passwordGen;
         }
         else if (inputNum === 2) {
-            // var passwordLength = prompt("Please enter length of Password");
-            var passwordLength = document.getElementById("passwordLength").value;
-            var x = parseInt(passwordLength);
-
-            while (x < 8 || x > 128 || isNaN(x)){
-                alert("Error, Invalid number!");
-                var passwordLength = prompt("Password must be at least 8 characters!");
-                var x = parseInt(document.getElementById("passwordLength").value = passwordLength);
-            }
-
-            var charSet02 = charSet01.toUpperCase();
-            numSet = charSet02.length;
-
-            for (var i = 0; i < passwordLength; i++) {
-            retVal += charSet02.charAt(Math.floor(Math.random() * numSet));
-            }
-
-            console.log(retVal);
-            document.getElementById("password").value = retVal;
-            return retVal;
+            var passwordGen = characterSelect(1);
+            return passwordGen;
         }
         else if (inputNum === 3) {
-             // var passwordLength = prompt("Please enter length of Password");
-             var passwordLength = document.getElementById("passwordLength").value;
-             var x = parseInt(passwordLength);
- 
-             while (x < 8 || x > 128 || isNaN(x)){
-                 alert("Error, Invalid number!");
-                 var passwordLength = prompt("Password must be at least 8 characters!");
-                 var x = parseInt(document.getElementById("passwordLength").value = passwordLength);
-             }
-
-            var charSet03 = "0123456789";
-            numSet = charSet03.length;
-            
-            for (var i = 0; i < passwordLength; i++) {
-            retVal += charSet03.charAt(Math.floor(Math.random() * numSet));
-            }
-
-            console.log(retVal);
-            document.getElementById("password").value = retVal;
-            return retVal;
+            var passwordGen = characterSelect(2);
+            return passwordGen;
         }
         else if (inputNum === 4) {
-             // var passwordLength = prompt("Please enter length of Password");
-             var passwordLength = document.getElementById("passwordLength").value;
-             var x = parseInt(passwordLength);
- 
-             while (x < 8 || x > 128 || isNaN(x)){
-                 alert("Error, Invalid number!");
-                 var passwordLength = prompt("Password must be at least 8 characters!");
-                 var x = parseInt(document.getElementById("passwordLength").value = passwordLength);
-             }
-
-            var charSet04 = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-            numSet = charSet04.length;
-            
-            for (var i = 0; i < passwordLength; i++) {
-            retVal += charSet04.charAt(Math.floor(Math.random() * numSet));
-            }
-
-            console.log(retVal);
-            document.getElementById("password").value = retVal;
-            return retVal;
+            var passwordGen = characterSelect(3);
+            return passwordGen;
         }
         else if (inputNum === 5) {
-            // var passwordLength = prompt("Please enter length of Password");
-            var passwordLength = document.getElementById("passwordLength").value;
-            var x = parseInt(passwordLength);
-
-            while (x < 8 || x > 128 || isNaN(x)){
-                alert("Error, Invalid number!");
-                var passwordLength = prompt("Password must be at least 8 characters!");
-                var x = parseInt(document.getElementById("passwordLength").value = passwordLength);
-            }
-
-            var charSet05 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-            numSet = charSet05.length;
-            
-            for (var i = 0; i < passwordLength; i++) {
-            retVal += charSet05.charAt(Math.floor(Math.random() * numSet));
-            }
-
-            console.log(retVal);
-            document.getElementById("password").value = retVal;
-            return retVal;
+            var passwordGen = characterSelect(4);
+            return passwordGen;
         }
         else {
             alert("Error, Invalid input! Enter number 1, 2, 3, 4 or 5");    
@@ -141,6 +70,7 @@ function characterSelect(j) {
         "abcdefghijklmnopqrstuvwxyz",
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         "0123456789",
+        "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
     ];
 
