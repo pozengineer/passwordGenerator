@@ -17,7 +17,7 @@ characters until the password length is reached.
 Additional functions include copy to clipboard and reset where the user is able to select
 the generated password and paste it into another document. The reset method enables the user
 to set the application to it's default values in order to generate a new password but it is
-not necessary as the user can simply click on the generate password again.
+not necessary as the user can simply click on the generate password button again.
 
 The application uses 'addEventListener' so that when one of the buttons is clicked on, it will
 initiate the associated function. The use of 'preventDefault' and 'stopPropagation' methods are
@@ -27,7 +27,7 @@ prevents the clicked event from affecting the parent elements in the application
 The purpose of this application is to demonstrate the use of functions and 'addEventListener' so
 that events are able to be delegated to different elements in an html file. In addition, implementing
 responsive behaviour of html files using media queries. This enables the developer to create applications
-that can be viewed on multiple devices and scrren sizes such as:
+that can be viewed on multiple devices and screen sizes such as:
 - iphone
 - Tablet
 - Laptop
