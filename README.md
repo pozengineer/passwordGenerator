@@ -56,6 +56,14 @@ Download and clone the repository from GitHub using the following command:
 
 git clone https://github.com/pozengineer/passwordGenerator.git
 
+The following files are used to create the application:
+- index.html
+- reset.css
+- style01.css
+- javaScript02.js
+There are additional files that should be disregarded. They were used as the initial building
+blocks for the application but want to keep them for future reference.
+
 This application was built using:
 - HTML: HyperText Markup Language that allows the developer to structure webpages
 - CSS: Style Sheet Language that allows the developer to style an HTML document
