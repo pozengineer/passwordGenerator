@@ -50,11 +50,11 @@ Getting Started
 This documentation will assist you in viewing this project. To view the project either open
 the url of the deployed application with the following address in any browser:
 
-https://pozengineer.github.io/Week02-Assignment/
+https://pozengineer.github.io/passwordGenerator/
 
 Download and clone the repository from GitHub using the following command:
 
-git clone https://github.com/pozengineer/Week02-Assignment.git
+git clone https://github.com/pozengineer/passwordGenerator.git
 
 This application was built using:
 - HTML: HyperText Markup Language that allows the developer to structure webpages
