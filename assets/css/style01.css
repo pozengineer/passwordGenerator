@@ -96,6 +96,7 @@ h1 {
     font-size: x-large;
     margin-top: 20px;
     margin-bottom: 20px;
+    resize: none;
 }
 
 p {

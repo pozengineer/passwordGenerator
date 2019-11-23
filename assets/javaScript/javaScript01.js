@@ -63,7 +63,7 @@ function generatePassword() {
     }
 }
 
-function characterSelect(j) {
+function characterSelect(j, i, k, l) {
     // var passwordLength = prompt("Please enter length of Password");
     var retVal = "";
     var charSetArray = [
@@ -96,14 +96,14 @@ function characterSelect(j) {
     return retVal;
 }
 
-function copyPassword () {
+function copyPassword() {
     var password = document.getElementById("password");
     password.select();
     document.execCommand("Copy");
     alert("Copied the text: " + password.value);
 }
 
-function resetPassword () {
+function resetPassword() {
     document.getElementById("password").value = "Your Secure Password";
     document.getElementById("passwordLength").value = "";
     alert("Password Reset!");

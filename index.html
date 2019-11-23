@@ -27,8 +27,8 @@
                 <!-- row01-->
                 <div>
                     <div class="col-md-12 pass" id="passLength">
-                        <h3>Length of Password</h3>
-                        <input type="text" id="passwordLength" onfocus="this.placeholder=''" placeholder="Enter number here" onkeypress="return isNumberKey(event)">
+                        <h3>Password Length</h3>
+                        <input type="text" id="passwordLength" onfocus="this.value=''" placeholder="Enter number here" onkeypress="return isNumberKey(event)">
                     </div>
                 </div>
                 <!-- row03 -->
@@ -47,19 +47,19 @@
                 <!-- row04 -->
                 <div class="row">
                     <div class="col-md-4">
-                        <button id="generate" type="button" class="btn btn-success btn-lg" onclick="generatePassword()">
+                        <button id="generate" type="button" class="btn btn-success btn-lg">
                             Generate Password
                         </button>
                     </div>
 
                     <div class="col-md-4">
-                        <button id="reset" type="button" class="btn btn-primary btn-lg" onclick="resetPassword()">
+                        <button id="reset" type="button" class="btn btn-primary btn-lg">
                             Reset
                         </button>
                     </div>
 
                     <div class="col-md-4">
-                        <button id="copy" type="button" class="btn btn-secondary btn-lg" onclick="copyPassword()">
+                        <button id="copy" type="button" class="btn btn-secondary btn-lg">
                             Copy to Clipboard
                         </button>
                     </div>
@@ -69,10 +69,10 @@
         </section>
 
         <footer class="footer mt-auto py-3">
-            <span class="text-muted">Copyright &#169 2019</span>
+            <span class="text-muted">Copyright &#169; 2019</span>
         </footer>
 
-        <script type="text/javascript" src="assets/javaScript/javaScript01.js"></script>
+        <script type="text/javascript" src="assets/javaScript/javaScript02.js"></script>
 
     </body>
 

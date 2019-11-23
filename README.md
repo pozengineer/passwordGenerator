@@ -2,27 +2,48 @@
 
 Summary
 
-The web application is a website that presents the skills and capabilities of the web
-developer for public viewing. The website consists of three linked web pages that will
-enable the public to view the projects the developer has completed and a means to contact
-the developer if interested in their skills.
+The web application is a password generator that allows the user to select from an array
+of character sets including:
+- Lowercase characters
+- Uppercase characters
+- Numeric characters
+- Special characters
 
-The purpose of this application is to demonstrate responsive behaviour of html files
-using media queries. This enables the developer to create web pages that can be viewed on
-multiple devices and scrren sizes such as:
+The selected character sets will be added to a 'charSet' string which will then be used to
+generate the password by randomly selecting characters from the 'charSet' string. The length
+of the password is decided by the user and the application will continue to select random
+characters until the password length is reached.
+
+Additional functions include copy to clipboard and reset where the user is able to select
+the generated password and paste it into another document. The reset method enables the user
+to set the application to it's default values in order to generate a new password but it is
+not necessary as the user can simply click on the generate password again.
+
+The application uses 'addEventListener' so that when one of the buttons is clicked on, it will
+initiate the associated function. The use of 'preventDefault' and 'stopPropagation' methods are
+used to prevent the window from going to it's default settings when the function is run and
+prevents the clicked event from affecting the parent elements in the application.
+
+The purpose of this application is to demonstrate the use of functions and 'addEventListener' so
+that events are able to be delegated to different elements in an html file. In addition, implementing
+responsive behaviour of html files using media queries. This enables the developer to create applications
+that can be viewed on multiple devices and scrren sizes such as:
 - iphone
 - Tablet
 - Laptop
 - Desktop
 
-The web application was also used to demonstrate how html and css code from bootstrap can
-be implemented in order save time in constructing the html file from scratch. Some components
-from bootstrap that were used in the development of this application were:
-- Navigation Bar
-- Sticky Footer
-- Grid Layout
-- Forms
-- Buttons
+The following methods, objects and API's (Application programming Interface) were used in this web
+application to demonstrate how javaScript can be used to apply calculations and functions to elements
+in an html file:
+- Arrays 
+- Functions
+- While Loops
+- For Loops
+- IF Statements
+- addEventListener
+- preventDefault method
+- stopPropagation method
 
 Getting Started
 
@@ -41,13 +62,5 @@ This application was built using:
 - JavaScript: Programming Language that allows the developer to apply functions and methods to an HTML document 
 - BootStrap: Library of HTML and CSS files and code https://getbootstrap.com/
 
-![About Me tablet](assets/images/aboutMe01.jpg)
-![About Me phone](assets/images/aboutMe02.jpg)
-![Portfolio tablet](assets/images/portFolio01.jpg)
-![Portfolio phone](assets/images/portFolio02.jpg)
-![Contact tablet](assets/images/contact01.jpg)
-![Contact phone](assets/images/contact02.jpg)
-
-
-
-
+![passwordGenerator tablet](assets/images/passwordGen01.jpg)
+![passwordGenerator iphone](assets/images/passwordGen02.jpg)
